@@ -31,3 +31,13 @@ function displayTimeRemaining(endTime) {
   document.getElementById('timer').innerText = `Time remaining: ${minutes} minutes ${seconds} seconds`;
 }
 
+function checkUniqueWords(){
+  const text = document.getElementById('text').innerText;
+  const words = text.match(/\b(\w+)\b/g); // Split text into words using a regular expression
+  const uniqueWords = new Set(words.map(word => word.toLowerCase())); // Store unique words case-insensitively
+  if (uniqueWords.size > 50) {
+    alert(`You've used ${uniqueWords.size} unique words, which exceeds the limit of 50!`);
+  } else {
+    console.log(`You've used ${uniqueWords.size} unique words so far.`);
+  }
+}

@@ -18,7 +18,8 @@
             <li> Using only 50 unique words  
         </ul> 
        <blockquote contenteditable="true"  
-                oninput="startTimer()">
+                oninput="startTimer(); checkUniqueWords()"
+                id="text">
             <p>Start writing here! </p>
         </blockquote>
         <div id="timer"></div>
