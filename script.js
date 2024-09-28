@@ -18,7 +18,6 @@ function startTimer() {
 function displayTimeRemaining(endTime) {
   const remainingTime = Math.max(0, endTime - Date.now()); 
   // Ensure remaining time is not negative
-  const remainingTime = Math.max(0, endTime - Date.now()); 
   if (remainingTime === 0) {
     clearInterval(timer);
     document.getElementById('timer').innerText = `Time's up!`;
