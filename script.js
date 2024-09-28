@@ -1,7 +1,10 @@
 let timer;
 let countdown;
+let isTimerStarted = false;
 
 function startTimer() {
+  if (isTimerStarted) return; // Prevent the timer from restarting if already started
+  isTimerStarted = true;
   // Set end time to 45 minutes from now
   const endTime = Date.now() + 45 * 60 * 1000; 
   displayTimeRemaining(endTime);
